@@ -1,1 +1,3 @@
 # javascriptPractice
+
+javascript basics
