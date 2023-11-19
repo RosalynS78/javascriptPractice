@@ -22,3 +22,7 @@ let isHappy = true;
 let numberOfChickens = 6; //GOOD
 // NOT THE JS WAY:
 // let number_of_chickens = 6;
+
+//to see return value of a variable
+console.log(variable); //in console
+document.write(variable); //inserts on the webpage

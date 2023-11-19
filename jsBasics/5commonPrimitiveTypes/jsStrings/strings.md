@@ -318,3 +318,31 @@ replaceAll(mdn) - method returns a new string with all matchs of pattern replace
 ex. 
 
 "lol".repeat(10) // 'lollollollollollollollollollol' - makes a new string
+
+### Template literals 
+
+ex. (without template literals)
+
+let product = 'Artichoke';
+
+let price = 3.99;
+
+price = 2.25;
+
+let qty = 5;
+
+"you bought " + qty + " " + product  + ".  Total is: " + price * qty
+
+// "You bought 5 Artichoke. Total is: 11.25"
+
+*Template literals - are strings that allow embedded expressions, which will be evaluated and then turned into a resulting string*
+
+-newer way (besides concatenation(has these template)) - literals are a newer syntax
+
+ex.
+
+(back-tick)I counted ${3  + 4} sheep(back-tick) ; // "I counted 7 sheep"
+
+syntax - we use back - ticks not single quotes `
+
+* the back-tick key is usually above the tab key
