@@ -1,0 +1,68 @@
+Boolean Logic
+
+making decisions with javascript 
+
+different outcomes based off of certain criteria
+
+Comparison Operators
+
+> // greater than
+< // less than
+>= // greater than or equal to
+<= // less than or equal to
+== // equality 
+!= // not equal to
+=== // strict equality
+!== // strict non-equality
+
+ex.
+
+1 > 3 // false
+1 < 3 // true
+
+-1 <= -1 // true (equal)
+-1 <= 10 // true (less than 10)
+
+(comparing / testing)
+age= 34
+age >= 18 // true
+
+Equality Operators
+
+== // equality 
+!= // not equal to
+=== // strict equality
+!== // strict non-equality
+
+== (double equals) - equality
+-checks for equality of value, but not equality of type
+-it coerces both values to the same type
+-this can lead to some unexpected results
+
+(breakdown - this is going to check if two values are equal but it does not care about their type. if they are the same type what this means is that it will attempt to coerce two values. if they are of different types, it will attempt them to move them into, or transform them into the same type so that it can compare them and can lead them to some unexpected results.)
+
+ex.
+1 == 1 // true
+1 == '1' // true (but one is a number and one is a string - problematic) - converts and then compares
+
+ex. oddities
+
+5 == 5; //true
+'b' == 'c'; //true
+7 == '7'; //true
+true == false; //false
+0 == false; //true
+null == undefined; //true
+
+=== (triple equals) - strict equality
+-checks for equality of value and type
+
+ex. 
+5 === 5; // true
+1 === 2; // false
+2 === '2'; //false
+false === 0; //false
+
+same applies for != and !==
+10 != '10'; // false
+10 !== '10'; // true
