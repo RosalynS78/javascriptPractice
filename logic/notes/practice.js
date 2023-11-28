@@ -102,6 +102,34 @@ if(num <= 100) {
         }
     }
 }
-
+}
 // It passes the test because Math.random() returns a decimal value between 0 (inclusive) and 1 (exclusive), so when you floor that number you'll always get zero. Adding zero to 102 returns... 102!
 
+// Logical AND Mystery Exercise
+// I've provided you with a conditional statement that uses a variable called mystery  Please change the value of mystery so that the conditional is true and "YOU GOT IT" is printed to the console.  Do not change anything other than the value of mystery on line 1!
+
+// my answer
+const mystery = 'PPPPPP'; //CHANGE THIS VALUE TO MAKE THE CONDITIONAL BELOW TRUE
+// correct answer 'PPPPPP7"
+// mystery variable should still be defined
+// the mystery variable should be a string
+// the mystery variable should start with a "P" (uppercase")
+// the mystery variable shold be greater than 5 characters long
+// the mystery variable shold include a "7" somewhere
+
+// LEAVE THIS CODE ALONE! (pretty please)
+if(mystery[0] === 'P' && mystery.length > 5 && mystery.indexOf('7') !== -1){
+    console.log("YOU GOT IT!!!");
+}
+
+// explanation 
+// The indexOf() method returns the index within the calling String object of the first occurrence of the specified value, starting the search at fromIndex. Returns -1 if the value is not found.
+// Since, we want 7 to be in the string, which means when we used String.indexOf('7') it should not be equal to -1, as if it is equal to -1, it means that 7 is not present in the string.
+// So, Colt has used the condition
+
+// mystery.indexOf('7') !== -1
+// A new way would be using the includes methods, which tells us directly whether the given string is present in string or not.
+// So, we can write the above statement as
+
+// mystery.includes('7')
+// You can read about includes operator here

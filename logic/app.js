@@ -87,7 +87,7 @@ if (age2 < 5) {
 //nesting
 
 //separate conditionals
-const password = prompt("please enter your password");
+// const password = prompt("please enter your password");
 // password must be 6+ characters
 // if (password.length >= 6) {
 //     console.log("valid");
@@ -102,13 +102,68 @@ const password = prompt("please enter your password");
 // }
 
 // password must be 6+ characters
-if (password.length >= 6) {
-    // password cannot include space
-    if (password.indexOf(' ') === -1) {
-        console.log("valid password");
-    } else {
-        console.log("password must not include spaces");
-    }
+
+// if (password.length >= 6) {
+//     // password cannot include space
+//     if (password.indexOf(' ') === -1) {
+//         console.log("valid password");
+//     } else {
+//         console.log("password must not include spaces");
+//     }
+// } else {
+//     console.log("password too short. must be 6+ characters");
+// }
+
+
+// truthy - falsy
+
+// const userInput = prompt("Enter something");
+// if (userInput) {
+//     console.log("Truthy");
+// } else {
+//     console.log("Falsy");
+// }
+
+// and && 
+// const password3 = prompt("Enter your password");
+// if (password3.length >= 6 && password3.indexOf(' ') === -1) {
+//     console.log("Valid Password");
+// } else {
+//     console.log("Invalid Password");
+// }
+
+// or || 
+
+// const age3 = 90;
+// if (age3 < 5) {
+//     console.log("Free");
+// } else if (age3 < 10) {
+//     console.log("$10");
+// } else if (age3 < 65) {
+    
+// }
+
+const age3 = -5;
+if (age3 >= 0 && age3 < 5 || age3 >= 65) {
+    console.log("Free");
+} else if (age3 >=5 && age3 < 10) {
+    console.log("$10");
+} else if (age3 >= 10 && age3 < 65) {
+    console.log("$20");
 } else {
-    console.log("password too short. must be 6+ characters");
+    console.log("Invalid Age")
 }
+
+// !not
+
+// const firstName = prompt("enter your first name");
+// if (!firstName) {
+//     firstName = prompt("try again");
+// }
+
+const age4 = 45;
+if (!(age4 > 0 && age < 5 || age4 >= 65)) {
+    console.log("You're not a baby or senior")
+}
+
+
