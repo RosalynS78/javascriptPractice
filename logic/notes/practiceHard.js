@@ -27,3 +27,15 @@ const arr = ["cat", "dog", "bird", "hamster", "reptile", "fish"];
 for (let i = 0; i < 10; i++) {
     console.log(arr[i % arr.length]);
 }
+
+// write integer between 1 - 10 
+//user is prompted to input "guess Number"
+//displays "Good Work" matches
+//otherwise not matched
+
+
+function random
+	const guessNum())
+		guessNum.Math.random(Math)
+
+
