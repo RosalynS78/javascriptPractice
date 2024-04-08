@@ -87,7 +87,7 @@ first element has an index of zero
 
 ### Arrays are indexed
 
-ex.  
+ex.
 
 doc   |   Dopey   |   Bashful   |   Grumpy   |   Sneezy   |   Sleepy   |   Happy
 
@@ -105,7 +105,7 @@ ex.  ["Monday", "Tuesday", "Wednesday"]
 
 2: "Wednesday"
 
-days[0] 
+days[0]
 
 ="Monday"
 
@@ -121,7 +121,7 @@ days[2]
 
 ex. days [1][0]
 
-="T" 
+="T"
 
 explanation - it's an array (asking for index of one from that array, which gives us Tuesday). then asking for index of Tuesday [0] which gives "T"
 
@@ -157,7 +157,7 @@ colors [4] = 'blue';
 
 //['red', 'orange', 'yellow', 'green', 'blue'\]
 
-*note Cannot modify with strings 
+*note Cannot modify with strings
 
 ex.  let firstName = "colt";
 
@@ -175,7 +175,7 @@ explanation - in an array  we can change the entire element unlike with a string
 
 ex.  colors[10] = 'indigo'
 
-colors 
+colors
 
 ['red', 70, 'yellow', empty x 7, 'indigo']
 
@@ -209,7 +209,7 @@ beatles
 
 # Array Methods
 
-We can access elements using an index. We can modify elements using an index. Seen length property. 
+We can access elements using an index. We can modify elements using an index. Seen length property.
 
 Next - ***Built-in array methods***
 
@@ -239,7 +239,7 @@ Splice - removes/replaces elements
 
 Sort - sorts an array
 
-### Push & Pop (built-in method) 
+### Push & Pop (built-in method)
 
 -allow us to add and remove from the end of an array(from the very end, not the beginning)
 
@@ -273,7 +273,7 @@ person //"pablo"
 
 movieLine // ["tom", "nancy"]
 
-ex. let barbell = [] 
+ex. let barbell = []
 
 //undefined (empty)
 
@@ -299,7 +299,7 @@ barbell
 
 //(5) [45, 45, 25, 10, 2.5]
 
-note - think of this as a stack and queue (you pull off one from the top. that is the most recently-added one. you remove from the top) - same idea we add to the end. 
+note - think of this as a stack and queue (you pull off one from the top. that is the most recently-added one. you remove from the top) - same idea we add to the end.
 
 ex.  barbell.pop()
 
@@ -323,11 +323,11 @@ barbell.pop()
 
 ### Shift & Unshift (built-in method)
 
-#### Shift 
+#### Shift
 
 - remove from start the beginning of an array (similar to pop but it removes from the beginning)
 
-ex. moveLine 
+ex. moveLine
 
 (5) ["tom", "nancy", "pablo", "oliver", "eva" ]
 
@@ -359,8 +359,220 @@ movieLine
 
 (4) ["VIP", "pablo", "oliver", "eva"]
 
-### Concat, IndexOf
+### More Methods
 
-### Slice & Splice
+#### concat - merge arrays
 
-# Multi Dimensional Arrays
+-method is used to merge two or more arrays. this method does not change the existing arrays, but instead returns  a new array.
+
+ex.   two seperate arrays
+
+let cats = ['blue', 'kitty']
+
+let dogs = ['rusty', 'wyatt']
+
+cats.concat(dogs)
+
+//new array ["blue", "kitty", "rusty", "wyatt"]
+
+explanation - not updating cats - instead makes a new array that combines the two
+
+#### includes - looke for a value
+
+-method determines whether an array includes a certain value among its entries, returning true or false as appropriate
+
+-example of a Boolean method (true/false)
+
+ex. true/false
+
+cats.inlcudes('blue')
+
+//true
+
+cats.inludes('Blue')
+
+//false
+
+explanation - if misspelled or capitalized - it's entirely different strings 
+
+#### indexOf - just like string.indexOf
+
+-method returns the first index at which a given element can be found in the arry, or -1 is not present
+
+ex.  indexOf *"string"*
+
+"Blue".indexOf('B')
+
+//0
+
+"Blue.indexOf('e')"
+
+//3
+
+"Blue.indexOf('0')"
+
+//-1
+
+explanation - if the character's not found returns -1 (does not exist)
+
+ex. indexOf *"array"*
+
+comboParty
+
+(4)["rusty", "wyatt", "blue", "kitty"]
+
+comboParty.indexOf('rusty')
+
+//0
+
+#### join - creates a string from an array
+
+#### reverse - reverses an array
+
+-method reverses an array in place. The first array element becomes the last, and the last array element becomes the first
+
+*-known as a destructive method (changes the original)*
+
+ex. *reverses the original array*
+
+comboParty.reverse
+
+//(4) ["kitty", "blue", "wyatt", "rusty"]
+
+explanation -  it's not just returning a reverse copy it destructs (it reorganizes and reorders and reverses)
+
+#### slice - copies a portion on an array
+
+-method returns a shallow copy of a portion of an array into a new array object selected from start to end (end not included)  where start and end represent the index of items in that array. The original array will not be modified.
+
+ex. .slice(start, end)
+
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+colors.slice(3)
+
+//(4) ["green", "blue", "indigo", "violet"]
+
+explanation - goes from index of 3 (green) to end (if you onlly provide a start gives you portion of the array until the end)
+
+ex. cool colors in new array
+
+let coolColors = colors.slice(3)
+
+coolColors 
+
+//(4)["green", "blue", "indigo""]
+
+colors
+
+//(7) 
+
+['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+colors.slice(3)
+
+ex. (start, end)
+
+colors.slice(2,4)
+
+//(2)["yellow", "green"]
+
+explanation - does not stop at index of 4, not including 4 but stops up to this number *(includes the start but does not include the stop)*
+
+ex. warm colors in new array
+
+let warmColors = colors.slice(0, 3)
+
+warmColors
+
+//(3) ["red", "orange", "yellow"]
+
+ex. *negative index*
+
+colors.slice(-3) //gives the last 3
+
+//[(3) ["blue", "indigo", "violet"]
+
+explanation - give it a negative index and it will start from the end of the array.
+
+#### splice - removes/replaces elements
+
+-method changes the contents of an array by remving or replacing existing elements and/or adding new elements in place.
+
+-destructive to original array (does not make a copy)
+
+-splicing/joining
+
+ex. syntax array.splice(start[, deleteCount[, item1 [, item2 [, ...]]]])
+
+explanation - where to start our splice(starting index), how many things to delete, (optional) something to insert
+
+ex. removing (indigo)//starting index (5) | how many to delete (1)
+
+colors
+
+['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+colors.splice(5, 1)
+
+//["indigo"]
+
+explanation - returns an array containg what was deleted
+
+colors 
+
+//['red', 'orange', 'yellow', 'green', 'blue', 'violet']
+
+ex. remove multiples
+
+days 
+
+//(3) ["Monday", "Tuesday", "Wednesday"]
+
+days.slice(1, 2)
+
+//["Tuesday",  "Wednesday"]
+
+days
+
+//["Monday"]
+
+ex. inserting index(1) start | delete nothing (0) | add string
+
+colors
+
+['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+colors.splice(1, 0, 'red-orange')
+
+colors
+
+//['red', 'red-orange', orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+
+explanation - not replacing - just inserting between
+
+ex. multiples inserts
+
+colors.splice(3, 0, 'yellow-green', 'forestgreen')
+
+colors
+
+////['red', 'red-orange', orange', 'yellow-green', 'forestgreen',  'yellow', 'green', 'blue', 'indigo', 'violet']
+
+#### sort = sorts an array
+
+-method sorts the elements of an array in place and returns the sorted array. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+-call array.sort() is going to convert everything into strings then  compares their UTF-16 code unit values
+
+ex. sort
+
+let scores = [1, 70, 100, 2500, 9, -12, 0, 34]
+
+scores.sort()
+
+//[-12, 0, 1, 100, 2500, 34, 70, 9]
+
+*explanation - expected sorting by ascending and decending but this is incorrect. sorts by UTF-16 code unit values (this is not a reliable numeric sort)*
+
+## Equals operator == and ===
