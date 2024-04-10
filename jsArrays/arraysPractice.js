@@ -44,3 +44,15 @@ let newPlanet = planets.push('Saturn');
 planets.unshift('Mercury');
 
 console.log(planets);
+
+
+// Nested Arrays Exercise
+// I've provided you with an array called airplaneSeats, which represents the rows of seats on a flight.  Our friend Hugo is looking to book a seat on our flight. Fortunately, there is one middle seat available (it's set to null currently).  Please update the array element that is currently null, to instead be "Hugo". (Please don't directly change the code on line 6 where I'm initially setting it to null.  This is an exercise in accessing data in nested arrays!)
+
+// DO NOT TOUCH!!! (please)
+//got this wrong used .push() 
+// airplaneSeats[3][1].push('Hugo')
+
+// correct answer:
+
+airplaneSeats[3][1]= "Hugo"; //to access data out of nested array chain [index airplaneSeats array 3][nested array index 1] = set "Hugo"
