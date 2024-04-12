@@ -393,7 +393,7 @@ cats.inludes('Blue')
 
 //false
 
-explanation - if misspelled or capitalized - it's entirely different strings 
+explanation - if misspelled or capitalized - it's entirely different strings
 
 #### indexOf - just like string.indexOf
 
@@ -459,13 +459,13 @@ ex. cool colors in new array
 
 let coolColors = colors.slice(3)
 
-coolColors 
+coolColors
 
 //(4)["green", "blue", "indigo""]
 
 colors
 
-//(7) 
+//(7)
 
 ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 
@@ -519,13 +519,13 @@ colors.splice(5, 1)
 
 explanation - returns an array containg what was deleted
 
-colors 
+colors
 
 //['red', 'orange', 'yellow', 'green', 'blue', 'violet']
 
 ex. remove multiples
 
-days 
+days
 
 //(3) ["Monday", "Tuesday", "Wednesday"]
 
@@ -576,3 +576,9 @@ scores.sort()
 *explanation - expected sorting by ascending and decending but this is incorrect. sorts by UTF-16 code unit values (this is not a reliable numeric sort)*
 
 ## Equals operator == and ===
+
+The main difference between the == and === operator in javascript is that the == operator does the type conversion of the operands before comparison, whereas the === operator compares the values as well as the data types of the operands.
+
+Now, one thing we need to remember is that both **`==`**  and **`===`**  are used for comparisons and to find the degree of sameness or equality between the things we are comparing.
+
+Both **`==`** and **`===`** returns **true** if they find equality and **false **otherwise. But there is a catch: **`==`** and **`===`** use different criteria to measure the degree of equality.
